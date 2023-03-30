@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+      
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Personal Details
+              <h6 class="fw-bold text-success">{{request.user}}</h6>
+            </div>
+            <ul class="list-group list-group-flush" >
+                
+                <li class="list-group-item" id="dash_ul"> <span class="fw-bold">Name </span>     :{{customer.name}}</li>       
+                <li class="list-group-item" id="dash_ul"> <span class="fw-bold">Phone </span>     :{{customer.phone}} </li>
+                <li class="list-group-item" id="dash_ul"> <span class="fw-bold">Price Range </span>     :{{customer.price_range}} </li>
+             
+
+            </ul>
+          </div>
+        
+    </div>
+    
+    <div class="col-md-8 p-3 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+            {% for i in bookings %}
+            <div class="col">
+              <div class="card">
+                <img src="{{i.yacht_details_id.yacht_image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rent Price : {{i.price}}</h5>
+                    <p class="card-text">category : {{i.yacht_details_id.yacht_style_categories}}</p>
+                  <h5 class="card-title">yacht-type :{{i.yacht_details_id.yacht_type}}</h5>
+                  <p class="card-text">weeks : {{i.rent_weeks}} </p>
+                </div>
+              </div>
+            </div>
+           {% endfor %}
+          
+          </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

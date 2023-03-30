@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+      
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Featured
+            </div>
+            <ul class="list-group list-group-flush" >
+                <a href="{% url 'src:seller-dashboard'%}">
+                <li class="list-group-item" id="dash_ul">  Added Yacht</li>
+                </a>
+                
+                <a href="{% url 'src:add-yacht'%}">
+                <li class="list-group-item" id="dash_ul">  Add Yacht </li>
+                </a>
+
+                <a href="{% url 'src:booked-yacht'%}">
+                  <li class="list-group-item" id="dash_ul">  Booked Yacht </li>
+                </a>
+
+            </ul>
+          </div>
+        
+    </div>
+    
+    <div class="col-md-8 p-3 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+            {% for i in yachtes %}
+            <div class="col">
+              <div class="card">
+                <img src="{{i.yacht_image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.yacht_type}}</h5>
+                  <h5class="card-title">Rent Price : {{i.rent_price}}</h5>
+                  <p class="card-text">category : {{i.yacht_style_categories}}</p>
+                  <p class="card-text">size : {{i.yacht_sizes}} Meters</p>
+                </div>
+              </div>
+            </div>
+           {% endfor %}
+          
+          </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

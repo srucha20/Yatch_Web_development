@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5 shadow p-3 mb-5">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h5 class="text-center">Add Yacht Details</h5>
+            <hr>     
+            <!-- yacht_type -->
+            <div class="mb-3">
+            <label class="form-label">Yacht Type</label>
+              <select name="yacht_type" class="form-select">
+                <option value="Sailing Yacht">Sailing Yacht</option>
+                <option value="Motor Yacht">Motor Yacht</option>
+                <option value="Gulet Yacht">Gulet Yacht</option>
+                <option value="Open Yacht">Open Yacht, Cruiser, Cabin Cruiser, Express Cruiser</option>
+                <option value="Luxury Yacht">Luxury Yacht</option>
+                <option value="Sports Yacht">Sports Yacht</option>
+                <option value="Catamaran Yacht">Catamaran Yacht</option>
+              </select>
+            </div>
+            <!-- yacht_sizes -->
+            <div class="mb-3">
+                <label class="form-label">Yacht  Sizes</label>
+                <select name="yacht_sizes" class="form-select">
+                    <option value="Superyachts-24">Superyachts 24 Meters</option>
+                    <option value="Megayachts-80">Megayachts  80 Meters</option>
+                  </select>
+            </div>
+
+            <!-- yacht_style_categories -->
+            <div class="mb-3">
+                <label class="form-label">Yacht Style Categories</label>
+                <select name="yacht_style_categories" class="form-select">
+                    <option value="Sedan">Sedan</option>
+                    <option value="Flybridge">Flybridge</option>
+                    <option value="Flybridge">Flybridge</option>
+                    <option value="Daybridge">Daybridge</option>
+                    <option value="Open or Enclosed">Open or Enclosed</option>
+                    <option value="Downeast Style">Downeast Style</option>
+                    <option value="Pilothouse">Pilothouse</option>
+                    <option value="Sky Lounge">Sky Lounge</option>
+                    <option value="Cockpit Motor Yacht">Cockpit Motor Yacht</option>
+                    <option value="Sportfish or Sport Fishing Yacht">Sportfish or Sport Fishing Yacht</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Tri-Decks">Tri-Decks</option>
+                    <option value="Expedition Yachts">Expedition Yachts</option>
+                  </select>
+            </div>
+            <!-- rent_price -->
+            <div class="mb-3">
+                <label class="form-label">Rent</label>
+                <input type="text" name="rent_price" class="form-control">
+            </div>
+            <!-- yacht_image -->
+            <div class="mb-3">
+                <label class="form-label">Yacht Image</label>
+                <input type="file" name="yacht_image" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

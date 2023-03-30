@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="row justify-content-center mb-5">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+        {% for i in yachtes %}
+        <div class="col">
+          <div class="card shadow">
+            <img src="{{i.yacht_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{i.yacht_type}}</h5>
+              <h5class="card-title">Rent Price : {{i.rent_price}}</h5>
+              <p class="card-text">category : {{i.yacht_style_categories}}</p>
+              <p class="card-text">size : {{i.yacht_sizes}} Meters</p>
+            </div>
+            {% if customer %}
+            <div class="card-footer bg-transparent border-success">
+              <a class="btn btn-success" href="{% url 'src:yacht-form' i.id%}" role="button">Book Now</a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+       
+       {% endfor %}
+      
+
+</div>
+
+
+
+
+
+{% endblock %}
