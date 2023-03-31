@@ -30,7 +30,7 @@
         
     </div>
     
-    <div class="col-md-8 p-3 mb-5">
+    <div class="col-md-8 mb-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             
             {% for i in yachtes %}
@@ -38,7 +38,7 @@
               <div class="card">
                 <img src="{{i.yacht_image.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{i.yacht_type}}</h5>
+                  <h5 class="card-title card-title-bg">{{i.yacht_type}}</h5>
                   <h5class="card-title">Rent Price : {{i.rent_price}}</h5>
                   <p class="card-text">category : {{i.yacht_style_categories}}</p>
                   <p class="card-text">size : {{i.yacht_sizes}} Meters</p>

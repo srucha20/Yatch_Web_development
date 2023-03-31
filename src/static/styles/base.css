@@ -1,0 +1,32 @@
+.bg-navbar, btn-bg {
+    background: #88D7C2;
+}
+
+.btn-bg{
+    color: #FFF;
+    background-color: #59BE98;
+    border: 1px solid #59BE98;
+}
+.btn-bg:hover{
+    color: #59BE98;
+    background-color: #FFF;
+    border: 1px solid #59BE98;
+}
+.search-btn-bg{
+    border-color: #59BE98;
+}
+.search-btn-bg:hover{
+    background-color: #59BE98 !important;
+    border-color: #59BE98 !important;
+}
+.text-primary-bg{
+    color: #88D7C2;
+}
+
+.card-title-bg{
+    color: #59BE98;
+}
+
+.border-success-bg{
+    border-color:  #88D7C2;
+}

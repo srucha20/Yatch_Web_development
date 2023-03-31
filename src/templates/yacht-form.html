@@ -10,14 +10,14 @@
         <div class="card" style="width: 18rem;">
             <img src="{{i.yacht_image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{i.yacht_type}}</h5>
+              <h5 class="card-title card-title-bg">{{i.yacht_type}}</h5>
               <h5 class="card-title">Rent Price : {{i.rent_price}}</h5>
-              <p class="card-text">category : {{i.yacht_style_categories}}</p>
-              <p class="card-text">size : {{i.yacht_sizes}} Meters</p>
+              <p class="card-text">Category : {{i.yacht_style_categories}}</p>
+              <p class="card-text">Size : {{i.yacht_sizes}} Meters</p>
               
             </div>
-            <div class="card-footer bg-transparent border-success">
-                Seller Email: <span class="fw-bold text-primary">{{i.seller_id.user.username}}</span> 
+            <div class="card-footer bg-transparent border-success-bg">
+                Seller Email: <span class="fw-bold text-primary-bg">{{i.seller_id.user.username}}</span> 
             </div>
           </div>
        
@@ -27,14 +27,14 @@
     <div class="col-md-6 p-3 mb-5">
         <form method="POST">
             {% csrf_token %}
-            <h5 class="text-center">Book Yacht</h5>
+            <h5 class="text-center card-title-bg">Book Yacht</h5>
             <hr>     
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">How many weeks do you want to rent the yacht</label>
               <input type="hidden" value="{{i.id}}" name="yacht">
               <input type="number" name="rent_weeks" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
-            <button type="submit" class="btn btn-success">Book</button>
+            <button type="submit" class="btn btn-success btn-bg">Book</button>
           </form>
     </div>
 </div>

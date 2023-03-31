@@ -11,14 +11,14 @@
           <div class="card shadow">
             <img src="{{i.yacht_image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{i.yacht_type}}</h5>
+              <h5 class="card-title card-title-bg">{{i.yacht_type}}</h5>
               <h5class="card-title">Rent Price : {{i.rent_price}}</h5>
-              <p class="card-text">category : {{i.yacht_style_categories}}</p>
-              <p class="card-text">size : {{i.yacht_sizes}} Meters</p>
+              <p class="card-text">Category : {{i.yacht_style_categories}}</p>
+              <p class="card-text">Size : {{i.yacht_sizes}} Meters</p>
             </div>
             {% if customer %}
-            <div class="card-footer bg-transparent border-success">
-              <a class="btn btn-success" href="{% url 'src:yacht-form' i.id%}" role="button">Book Now</a>
+            <div class="card-footer bg-transparent border-success-bg">
+              <a class="btn btn-success btn-bg" href="{% url 'src:yacht-form' i.id%}" role="button">Book Now</a>
             </div>
             {% endif %}
           </div>
