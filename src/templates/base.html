@@ -10,6 +10,44 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="{% static 'src/static/styles/base.css' %}">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+      .bg-navbar, btn-bg {
+    /* background: #88D7C2; */
+    background: rgb(89,190,152);
+background: linear-gradient(90deg, rgba(89,190,152,1) 6%, rgba(89,190,152,1) 13%, rgba(136,215,194,1) 50%, rgba(254,254,254,1) 96%);
+}
+
+.btn-bg{
+    color: #FFF;
+    background-color: #59BE98;
+    border: 1px solid #59BE98;
+}
+.btn-bg:hover{
+    color: #59BE98;
+    background-color: #FFF;
+    border: 1px solid #59BE98;
+}
+.search-btn-bg{
+    background-color: #59BE98;
+    border-color: #59BE98;
+}
+.search-btn-bg:hover{
+    color: #59BE98 !important;
+    background-color: #fff !important;
+    border-color: #59BE98 !important;
+}
+.text-primary-bg{
+    color: #88D7C2;
+}
+
+.card-title-bg{
+    color: #59BE98;
+}
+
+.border-success-bg{
+    border-color:  #88D7C2;
+}
+    </style>
     <nav class="navbar navbar-expand-lg bg-navbar">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="/"><img src="../../media/Yacht Images/Logo.png"/> &nbsp Sailaway</a>
