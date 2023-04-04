@@ -1,5 +1,7 @@
 .bg-navbar, btn-bg {
-    background: #88D7C2;
+    /* background: #88D7C2; */
+    background: rgb(89,190,152);
+background: linear-gradient(90deg, rgba(89,190,152,1) 6%, rgba(89,190,152,1) 13%, rgba(136,215,194,1) 50%, rgba(254,254,254,1) 96%);
 }
 
 .btn-bg{
@@ -13,10 +15,12 @@
     border: 1px solid #59BE98;
 }
 .search-btn-bg{
+    background-color: #59BE98;
     border-color: #59BE98;
 }
 .search-btn-bg:hover{
-    background-color: #59BE98 !important;
+    color: #59BE98 !important;
+    background-color: #fff !important;
     border-color: #59BE98 !important;
 }
 .text-primary-bg{
